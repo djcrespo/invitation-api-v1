@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import Invitation
 
-# Register your models here.
+@admin.register(Invitation)
+class AdminInvitation(admin.ModelAdmin):
+    ordering = ('-created_at',)
+    list_display = ('id', 'confirm', 'created_at', 'updated_at')
+    search_fields = ('id',)
+    filter_horizontal = ('persons',)
+    readonly_fields = ('created_at', 'updated_at')
