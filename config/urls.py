@@ -31,6 +31,7 @@ from rest_framework_simplejwt.views import (
 
 from rest_framework import routers
 from apps.accounts.views import *
+from apps.persons.views import *
 
 # Endpoint de la documentación
 
@@ -70,6 +71,7 @@ auth_urlpatterns = [
 # Rutas de los módulos
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
+router.register(r'persons', PersonViewSet)
 
 # Rutas exclusivas de la API
 

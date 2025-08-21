@@ -22,6 +22,8 @@ THIRD_APPS = [
 
 LOCAL_APPS = [
     'apps.accounts',
+    'apps.persons',
+    'apps.invitations',
     # 'logs'
 ]
 
