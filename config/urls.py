@@ -32,21 +32,22 @@ from rest_framework_simplejwt.views import (
 from rest_framework import routers
 from apps.accounts.views import *
 from apps.persons.views import *
+from apps.invitations.views import *
 
 # Endpoint de la documentación
 
-admin.site.site_header = "BASE Admin"
-admin.site.site_title = "BASE Admin Portal"
-admin.site.index_title = "Welcome to BASE Administration Portal"
+admin.site.site_header = "Invitations Admin"
+admin.site.site_title = "Invitation Admin Portal"
+admin.site.index_title = "Welcome to Invitation Administration Portal"
 admin.site.site_url = "/api/v2/"
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="BASE API",
-        default_version='v2.0.0',
-        description="API Template",
+        title="Invitations API",
+        default_version='v1.0.0',
+        description="API for managing invitations for Didier & Mari wendding.",
         terms_of_service="",
-        contact=openapi.Contact(email="devteam@paramq.com"),
+        contact=openapi.Contact(email="dj.crespo.castilla@gmail.com"),
         license=openapi.License(name="MIT License"),
     ),
     public=False,
@@ -72,6 +73,7 @@ auth_urlpatterns = [
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'persons', PersonViewSet)
+router.register(r'invitations', InvitationViewSet)
 
 # Rutas exclusivas de la API
 
@@ -85,7 +87,7 @@ api_urlpatterns = [
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/admin/', permanent=True)),
-    path('api/v2/', include(api_urlpatterns)),
+    path('api/v1/', include(api_urlpatterns)),
     path('docs/', include(apidocs_urlpatterns)),
     path("accounts/", include("rest_framework.urls", namespace="rest_framework"))
 ]
