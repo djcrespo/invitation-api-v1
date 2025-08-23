@@ -4,7 +4,7 @@ from apps.persons.models import Person
 
 
 TYPE_CHOICES = (
-    ('FAMILY', 'FAMILY'),
+    ('GROUP', 'GROUP'),
     ('INDIVIDUAL', 'INDIVIDUAL'),
 )
 
@@ -13,7 +13,7 @@ FROM_CHOICES = (
     ('MARI', 'MARI'),
 )
 
-GROUP_CHOICES = (
+LIST_CHOICES = (
     ('FAMILY', 'FAMILY'),
     ('FRIENDS', 'FRIENDS'),
 )
@@ -24,7 +24,7 @@ class Invitation(models.Model):
     confirm = models.BooleanField(default=None, null=True)
     message = models.TextField(blank=True, null=True)
     from_person = models.CharField(max_length=255, blank=True, null=True, choices=FROM_CHOICES)
-    group_person = models.CharField(max_length=255, blank=True, null=True, choices=GROUP_CHOICES)
+    group_person = models.CharField(max_length=255, blank=True, null=True, choices=LIST_CHOICES)
     type = models.CharField(max_length=255, blank=True, null=True, choices=TYPE_CHOICES)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
