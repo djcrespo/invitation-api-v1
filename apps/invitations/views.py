@@ -100,7 +100,7 @@ class InvitationViewSet(viewsets.ModelViewSet):
                         persons.append(miembro['nombre'])
                         invitation.persons.add(person)
                     invitation.save()
-                    link = f"https://invitation.devcrespo.tech/{invitation.id}"
+                    link = f"https://invitation.devcrespo.tech/#/{invitation.id}"
                     group_generate = {
                         'type': type,
                         'persons': persons,
