@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y gcc
 
 # Add user
 RUN useradd -m -u 1000 user && \
-    chown -R user:user /app
+    chown -R user:user /code
 
 USER user
 
