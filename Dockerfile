@@ -1,46 +1,40 @@
-# pull official base image
-FROM python:3.10
+# Usa una imagen base más específica
+FROM python:3.10-slim-bullseye
 
-# set work directory
+# Establece variables de entorno para evitar prompts
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Establece el directorio de trabajo
 WORKDIR /code
 
-# install system dependencies
-RUN apt-get update && apt-get install -y \
+# Instala dependencias del sistema primero (como root)
+RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
-    build-essential \
-    python3-dev \
-    python3-pip \
-    python3-setuptools \
-    python3-wheel \
-    python3-cffi \
     libcairo2 \
     libpango-1.0-0 \
     libpangocairo-1.0-0 \
     libgdk-pixbuf2.0-0 \
     libffi-dev \
-    shared-mime-info
+    && rm -rf /var/lib/apt/lists/*
 
-# Add user
+# Crea usuario y cambia permisos
 RUN useradd -m -u 1000 user && \
     chown -R user:user /code
 
 USER user
 
-# Upgrade pip
-RUN pip install --user --upgrade pip
-
-# install dependencies
+# Actualiza pip e instala dependencias de Python
+RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install --user -r requirements.txt
 
-# copy project
-COPY . /code/
+# Copia el proyecto
+COPY --chown=user:user . /code/
 
-# set environment variables
-ENV PYTHONUNBUFFERED 1
-ENV PATH="/home/user/.local/bin:${PATH}"
-
+# Expone el puerto
 EXPOSE 8000
 
-# Command to run the application
+# Comando para ejecutar la aplicación
 CMD sh -c "python manage.py collectstatic --noinput && python manage.py migrate && gunicorn config.wsgi --bind 0.0.0.0:8000 --workers 3 --log-level=DEBUG"
