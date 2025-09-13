@@ -26,6 +26,7 @@ COPY . /code/
 
 # set environment variables
 ENV PYTHONUNBUFFERED 1
+ENV PATH="/home/user/.local/bin:${PATH}"
 
 EXPOSE 8000
 
