@@ -28,7 +28,7 @@ USER user
 # Actualiza pip e instala dependencias de Python
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
-RUN pip install --user -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copia el proyecto
 COPY --chown=user:user . /code/
@@ -37,4 +37,4 @@ COPY --chown=user:user . /code/
 EXPOSE 8000
 
 # Comando para ejecutar la aplicación
-CMD sh -c "python manage.py collectstatic --noinput && python manage.py migrate && gunicorn config.wsgi --bind 0.0.0.0:8000 --workers 3 --log-level=DEBUG"
+CMD sh -c "python manage.py collectstatic --noinput && python manage.py migrate && /home/user/.local/bin/gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3"
