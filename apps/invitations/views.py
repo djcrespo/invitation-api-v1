@@ -68,7 +68,10 @@ class InvitationViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['POST'], permission_classes=[permissions.IsAuthenticated])
     def get_urls(self, request):
         listUrls = []
-        invitations = Invitation.objects.filter(group_person=request.data.get('group'), from_person=request.data.get('form'))
+        # print(request.data)
+        data = request.data
+        invitations = Invitation.objects.filter(group_person=data['group'], from_person=data['from'])
+        # print(invitations)
         for invitation in invitations:
             persons = invitation.persons.all()
             persons_list = [person.full_name for person in persons]

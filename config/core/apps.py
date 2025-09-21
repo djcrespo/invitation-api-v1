@@ -16,7 +16,7 @@ THIRD_APPS = [
     'rest_framework_simplejwt',
     'drf_yasg',
     'corsheaders',
-    'storages'
+    # 'storages'
 ]
 
 # Apps o módulos del proyecto
