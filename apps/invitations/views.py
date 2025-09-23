@@ -6,6 +6,9 @@ from .serializers import InvitationSerializer
 from apps.persons.models import Person
 from .emailService import send_email
 import json
+import pandas as pd
+from django.http import HttpResponse
+import io
 
 
 class InvitationViewSet(viewsets.ModelViewSet):
@@ -65,24 +68,83 @@ class InvitationViewSet(viewsets.ModelViewSet):
             return Response({'status': 'invitation already confirmed'}, status=202)
         return Response({'status': 'confirmation failed'}, status=400)
 
+    # @action(detail=False, methods=['POST'], permission_classes=[permissions.IsAuthenticated])
+    # def get_urls(self, request):
+    #     listUrls = []
+    #     # print(request.data)
+    #     data = request.data
+    #     invitations = Invitation.objects.filter(group_person=data['group'], from_person=data['from'])
+    #     # print(invitations)
+    #     for invitation in invitations:
+    #         persons = invitation.persons.all()
+    #         persons_list = [person.full_name for person in persons]
+    #         link = f"https://envetia-myd.djcrespo.dev/#/{invitation.id}"
+    #         invitation_data = {
+    #             'type': invitation.type,
+    #             'persons': persons_list,
+    #             'link': link
+    #         }
+    #         listUrls.append(invitation_data)
+    #     return Response({'list': listUrls}, status=200)
+
     @action(detail=False, methods=['POST'], permission_classes=[permissions.IsAuthenticated])
     def get_urls(self, request):
-        listUrls = []
-        # print(request.data)
         data = request.data
-        invitations = Invitation.objects.filter(group_person=data['group'], from_person=data['from'])
-        # print(invitations)
+        invitations = Invitation.objects.filter(
+            group_person=data['group'], 
+            from_person=data['from']
+        )
+        
+        # Preparar datos para Excel
+        excel_data = []
+        
         for invitation in invitations:
             persons = invitation.persons.all()
-            persons_list = [person.full_name for person in persons]
+            persons_list = ", ".join([person.full_name for person in persons])
             link = f"https://envetia-myd.djcrespo.dev/#/{invitation.id}"
-            invitation_data = {
-                'type': invitation.type,
-                'persons': persons_list,
-                'link': link
-            }
-            listUrls.append(invitation_data)
-        return Response({'list': listUrls}, status=200)
+            
+            excel_data.append({
+                'Tipo': invitation.type,
+                'Personas': persons_list,
+                'Enlace': link,
+                # 'ID Invitación': str(invitation.id),
+                # 'Grupo': invitation.group_person if invitation.group_person else '',
+                # 'Creado por': invitation.from_person if invitation.from_person else '',
+                # 'Fecha Creación': invitation.created_at.strftime('%Y-%m-%d %H:%M:%S'),
+                # 'Confirmado': 'Sí' if invitation.confirm else 'No'
+            })
+        
+        # Crear DataFrame de pandas
+        df = pd.DataFrame(excel_data)
+        
+        # Crear archivo Excel en memoria
+        output = io.BytesIO()
+        with pd.ExcelWriter(output, engine='openpyxl') as writer:
+            df.to_excel(writer, sheet_name='Invitaciones', index=False)
+            
+            # Autoajustar columnas
+            worksheet = writer.sheets['Invitaciones']
+            for column in worksheet.columns:
+                max_length = 0
+                column_letter = column[0].column_letter
+                for cell in column:
+                    try:
+                        if len(str(cell.value)) > max_length:
+                            max_length = len(str(cell.value))
+                    except:
+                        pass
+                adjusted_width = (max_length + 2)
+                worksheet.column_dimensions[column_letter].width = adjusted_width
+        
+        output.seek(0)
+        
+        # Crear respuesta HTTP con el archivo Excel
+        response = HttpResponse(
+            output.getvalue(),
+            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        )
+        response['Content-Disposition'] = 'attachment; filename="invitaciones.xlsx"'
+        return response
 
     @action(detail=False, methods=['POST'], permission_classes=[permissions.IsAuthenticated])
     def upload_persons(self, request):
