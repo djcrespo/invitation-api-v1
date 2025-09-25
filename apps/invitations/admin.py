@@ -8,6 +8,7 @@ class AdminInvitation(admin.ModelAdmin):
     search_fields = ('id', 'persons__full_name', )
     list_filter = ('confirm', 'from_person', 'group_person', 'type')
     readonly_fields = ('created_at', 'updated_at')
+    actions = ['check_confirm_true', 'check_confirm_false', 'uncheck_confirm']
 
     def display_persons(self, obj):
         """Muestra la lista de personas en la relación ManyToMany"""
@@ -27,3 +28,27 @@ class AdminInvitation(admin.ModelAdmin):
     
     # Configuración opcional para el nombre de la columna
     display_persons.short_description = 'Personas invitadas'
+
+    def check_confirm_true(self, request, queryset):
+        for invitation in queryset:
+            if invitation.confirm is None:
+                invitation.confirm = True
+                invitation.save()
+        self.message_user(request, "Confirmación de invitaciones actualizada a Si asistirá.")
+
+    def check_confirm_false(self, request, queryset):
+        for invitation in queryset:
+            if invitation.confirm is None:
+                invitation.confirm = False
+                invitation.save()
+        self.message_user(request, "Confirmación de invitaciones actualizada a No Asistirá.")
+
+    def uncheck_confirm(self, request, queryset):
+        for invitation in queryset:
+            if invitation.confirm is not None:
+                invitation.confirm = None
+                invitation.save()
+        self.message_user(request, "Confirmación de invitaciones revertida.")
+
+    
+

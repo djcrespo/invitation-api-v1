@@ -1,0 +1,589 @@
+{
+    "list": [
+        {
+            "type": "GROUP",
+            "persons": [
+                "Eduardo Bates",
+                "Ceci"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/f1262f44-d944-41d2-889a-24384fadb01c"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Saul",
+                "Esposa de saul"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/745f3984-5112-47ee-911b-3ff21749f031"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Hugo"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/8a8ab356-bdba-4100-a375-7f148e7e7c65"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Maribel",
+                "Ivan"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/8b6ac297-a567-48af-9f83-3ddc79c98ca1"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Dayana",
+                "Mario"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/38062bb8-fb85-4ad5-bdfd-456e34b615eb"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Chato"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/941a678a-887b-42b8-b365-6ccd60780ed6"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Adrian"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/b423545c-bb83-4425-b465-20ec0d1c06b7"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Doc Mauricio"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/e390fb4a-8adb-4439-b42b-e797767157d3"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Emilia",
+                "Pareja emilia"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/c9510df0-9768-4988-9f78-e1797a5887a8"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Luis"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/2c27a773-7bbe-4bde-b5e0-1add80e34eff"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Dilan",
+                "Novia de dilan"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/5b7746d7-c717-43e2-9b99-b39ba6fbc580"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Martin"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/2bbc93a3-8ecb-4b38-b2bd-c89bbe4f8c48"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Gonzalo",
+                "Novia de gonzalo"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/6e0b7c23-a0f8-4d83-b692-fa6be3bd1a25"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Lenin"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/a03ecbdb-4562-49a4-8f9e-3eec279e2612"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Juan González",
+                "Novia juan"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/9549d1b7-2586-4f0f-8ce5-4e8cbe1551d4"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Ariff moreno",
+                "Novia ariff"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/beb3d99c-ed3e-41aa-b7b2-443c40783dc2"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Paul mena"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/9f730d26-9df7-4265-98b0-c5b5811e7e69"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Sonrix"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/c8a4e695-655d-4195-8fa7-3b2de18955c5"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Ana Toledo"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/475acad3-2cc1-4bf4-97c3-5b62c9e1fa42"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Omar Miranda",
+                "Novia de Omar"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/376416a7-679c-420d-bea2-b27da509b7e8"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Angela Gomez (TAB)",
+                "Diana (prima de Angela)"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/1e57085a-f548-4ade-9f34-5051151c5eeb"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Carolina",
+                "Enrique Romo"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/96b3f27d-45ae-4d4f-82e7-feb122deef53"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Juliana",
+                "Novio Juliana"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/4182efe0-b487-4cfb-9fb2-c43ca00d24eb"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Gabriela",
+                "Aaron"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/d4280095-c9cf-4ce3-9562-bf75bfdd11a7"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Beth"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/b0bc3033-689c-486e-a169-abeaede010c0"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Yasury",
+                "Ceci"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/56d7a470-39a5-4eca-90aa-68fe88465a9d"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Augusto"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/d2191c3d-af78-4321-b5e8-4bd153e58375"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Kevin"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/5786d58a-6ae6-4aa5-8192-6aac95588a63"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Dan"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/403c2368-6fba-4d31-942d-c7897383d71d"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Adrian"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/c70467a6-7778-4569-a14b-bdbc0558b1d9"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Diego Bacelis"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/ba28e2f0-d41e-4fbc-be50-522519e22681"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Mario Bass"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/7aa0842d-8af1-408a-b108-7e87e549a11a"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Nazareth"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/a5aa0d57-fd16-4c27-a575-3bbfe2542a7f"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Oramas"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/5626efba-75ee-41fd-9733-407f781d1756"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Happy"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/f891a463-a998-4731-9c60-226c7582d9e1"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Monse Duran"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/c9c9b19b-9cc7-4e44-b784-5fb04107ef16"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Ceci"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/3a25dd24-acac-4c1a-8495-e1cfc819b5e7"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Shacell"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/49097551-44ad-4ece-a8ff-ee9734722f1e"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Luis"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/472c0bed-2dad-4a07-918f-fc675fc7bedb"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Angel Vela"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/4281301a-2331-4439-b02b-2e5687b929ba"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Oscar"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/1bd13469-fbdf-4f15-932b-d6cfd55ef3fd"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Gelmi"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/44f51481-c5af-4aa2-97f1-5a1fc5c7119b"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Monse Pantoja"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/d59eae5f-d14e-4674-b659-3a72e7fe1083"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Gabriel"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/60565428-bf28-43b0-8e79-a48957f1a5e0"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Jesús crespo",
+                "Doña Gaby",
+                "Ivan"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/a6b7e894-3364-4b84-bf1c-b56304a99253"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "La abuela",
+                "Josefina",
+                "Gabriel"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/ebdbb3c8-5087-4fe4-9a31-e6ea525af427"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Gina",
+                "Jorgito",
+                "Javier"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/acfae3b1-b913-4f3f-a794-b1eaceafefd2"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Hernan",
+                "Tete",
+                "Arlet"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/bfcc92a5-3c31-4add-b2df-e421d0959cad"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Mariana",
+                "Gets"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/8c3159d9-ee45-4a7e-a5a1-25d7b5f76547"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Gelmi tia",
+                "Jorge",
+                "Novia de jorge"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/ae36877e-03e5-4d0a-b9cc-e5a02cf12470"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Virgilio",
+                "Víctor",
+                "Suemy",
+                "Novio de Suemy",
+                "Junior"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/cbac30a5-0b41-4673-a1f5-fbca6e2cb21e"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Tesy",
+                "Luis esposo de Tesy"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/12d0b978-59e6-430b-9306-cfb0132c11fb"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Nadia",
+                "Tio Jorge 2",
+                "Max",
+                "Jorgito 2"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/17c2bf91-2313-40ba-8f72-bc0bb45e7b16"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Saidy",
+                "Esposo saidy",
+                "Hija menor saidy",
+                "Ailyn"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/c9ae34db-9194-4f8b-b666-1a886c5dc097"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Mamá saidy",
+                "Esposo de mamá de saidy",
+                "Fabián",
+                "Pareja de Fabián"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/16025a51-88fb-45f8-b82f-4a4812ad8339"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Iván",
+                "Amy",
+                "Ivancito",
+                "Ivanna"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/9aeb9933-d167-4ce7-b58c-04432e7af344"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Tía nanci",
+                "Hija de tía nanci",
+                "Nieta de tía nanci"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/b24ef409-6390-4124-a9a5-ff18cb5a3425"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Papá de gil",
+                "Mamá de gil",
+                "Sinai",
+                "Naomi",
+                "Novio naomi"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/75fd44d5-7daa-4319-ab39-8d35725bdde7"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Aida",
+                "Heladio"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/fd052fbb-9b8b-4aa1-ba03-0498ac23a92b"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Viry",
+                "Ania"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/c2ce157c-a8ba-42a4-8b3a-217b3c457ed7"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Chapis",
+                "Tía Mary",
+                "Aime",
+                "La abuela de chapis"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/ecad5569-2e01-49a0-8d99-754b1cfc3da6"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Tía angélica",
+                "Clara",
+                "Kim",
+                "Daf",
+                "Manuel"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/97a488a0-0349-4eb6-b818-a27216aab16d"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Jessica",
+                "Su pajera de Jessica",
+                "Fer"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/ee61d46e-ec4b-46b5-a5ce-f045ac628454"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Tío Jorge progreso",
+                "Tía mary",
+                "Gina",
+                "Karlita"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/45384a84-3835-4b88-90a7-b4ed6a3dda43"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Rosario Primo de Mari",
+                "Andrea",
+                "Ernesto Sobrino",
+                "Lupita Sobrina",
+                "Karen Sobrina"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/e6a26f36-1dd1-457c-8062-8371aec37bcc"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Luis Primo",
+                "Karen Esposa de Luis"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/108cb29e-003f-4f74-8989-e355aebadbfc"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Lorena",
+                "Floricel",
+                "Emiliano"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/df138a25-cce5-45a6-8f41-f4387a6eebbd"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Janet",
+                "Esposo de Janet"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/33f1b1a9-14ba-4812-9bbf-a1b36a31612a"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Tio Rolando",
+                "Tia Lupita"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/121fcfc6-fc85-4fdf-9230-4ac8f4d67040"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Tia Manuela"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/9ed90fe4-2565-48da-b811-77b931344c33"
+        },
+        {
+            "type": "INDIVIDUAL",
+            "persons": [
+                "Aldo Primo"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/0cd3e4f2-d5af-48a5-933f-b22a816aeba0"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Guadalupe",
+                "Pareja papá"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/0ccb84a5-d61d-4609-9369-73e6be55a266"
+        },
+        {
+            "type": "GROUP",
+            "persons": [
+                "Chely",
+                "Lionel"
+            ],
+            "link": "https://envetia-myd.djcrespo.dev/#/df1e8ec0-47b6-49da-8d64-0d0f6791e248"
+        }
+    ]
+}
