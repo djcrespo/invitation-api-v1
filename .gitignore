@@ -5,3 +5,7 @@
 
 # Folders
 .idea/
+
+# pyc files
+__pycache__/
+*.pyc
