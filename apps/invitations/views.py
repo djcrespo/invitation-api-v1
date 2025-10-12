@@ -175,7 +175,7 @@ class InvitationViewSet(viewsets.ModelViewSet):
             return Response({'status': 'invitation not found'}, status=404)
         
 
-    @action()
+    @action(detail=False, methods=['GET'], permission_classes=[permissions.IsAuthenticated])
     def list_confirmed(self, request):
         confirmed_invitations = Invitation.objects.filter(confirm=True)
         count = 0
