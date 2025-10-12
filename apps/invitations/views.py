@@ -68,24 +68,6 @@ class InvitationViewSet(viewsets.ModelViewSet):
             return Response({'status': 'invitation already confirmed'}, status=202)
         return Response({'status': 'confirmation failed'}, status=400)
 
-    # @action(detail=False, methods=['POST'], permission_classes=[permissions.IsAuthenticated])
-    # def get_urls(self, request):
-    #     listUrls = []
-    #     # print(request.data)
-    #     data = request.data
-    #     invitations = Invitation.objects.filter(group_person=data['group'], from_person=data['from'])
-    #     # print(invitations)
-    #     for invitation in invitations:
-    #         persons = invitation.persons.all()
-    #         persons_list = [person.full_name for person in persons]
-    #         link = f"https://envetia-myd.djcrespo.dev/#/{invitation.id}"
-    #         invitation_data = {
-    #             'type': invitation.type,
-    #             'persons': persons_list,
-    #             'link': link
-    #         }
-    #         listUrls.append(invitation_data)
-    #     return Response({'list': listUrls}, status=200)
 
     @action(detail=False, methods=['POST'], permission_classes=[permissions.IsAuthenticated])
     def get_urls(self, request):
@@ -138,13 +120,13 @@ class InvitationViewSet(viewsets.ModelViewSet):
         
         output.seek(0)
         
-        # Crear respuesta HTTP con el archivo Excel
         response = HttpResponse(
             output.getvalue(),
             content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
         )
         response['Content-Disposition'] = 'attachment; filename="invitaciones.xlsx"'
         return response
+    
 
     @action(detail=False, methods=['POST'], permission_classes=[permissions.IsAuthenticated])
     def upload_persons(self, request):
@@ -191,3 +173,12 @@ class InvitationViewSet(viewsets.ModelViewSet):
             return Response({'list': listUrls}, status=200)
         except Invitation.DoesNotExist:
             return Response({'status': 'invitation not found'}, status=404)
+        
+
+    @action()
+    def list_confirmed(self, request):
+        confirmed_invitations = Invitation.objects.filter(confirm=True)
+        count = 0
+        for invitation in confirmed_invitations:
+            count += invitation.persons.count()
+        return Response({'confirmed_count': count}, status=200)
