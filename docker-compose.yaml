@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  ############
+  #  Django  #
+  ############
+  envetia-api:
+    build:
+      context: . # Ruta al directorio que contiene tu Dockerfile
+      dockerfile: Dockerfile # Nombre de tu Dockerfile, si es diferente de 'Dockerfile'
+    image: envetia-api
+    command: sh -c "python manage.py migrate && python manage.py && gunicorn config.wsgi --bind 0.0.0.0:8000 --workers 3 --log-level=DEBUG"
+    restart: unless-stopped
+    container_name: envetia-api
+    networks:
+      - net-proxy
+    environment:
+      - VIRTUAL_HOST=envetia-api.djcrespo.dev
+      - VIRTUAL_PORT=8000
+      - LETSENCRYPT_HOST=envetia-api.djcrespo.dev
+    expose:
+      - 8000
+    env_file: .env
+
+networks:
+  net-proxy:
+    external: true  
