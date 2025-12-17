@@ -73,7 +73,7 @@ class InvitationViewSet(viewsets.ModelViewSet):
     def get_urls(self, request):
         data = request.data
         invitations = Invitation.objects.filter(
-            group_person=data['group'], 
+            group_person=data['group'],
             from_person=data['from']
         )
         

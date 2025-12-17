@@ -33,6 +33,7 @@ from rest_framework import routers
 from apps.accounts.views import *
 from apps.persons.views import *
 from apps.invitations.views import *
+from apps.gallery.views import *
 
 # Endpoint de la documentación
 
@@ -74,6 +75,7 @@ router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'persons', PersonViewSet)
 router.register(r'invitations', InvitationViewSet)
+router.register(r'gallery', PhotoViewSet)
 
 # Rutas exclusivas de la API
 

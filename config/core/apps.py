@@ -25,6 +25,7 @@ LOCAL_APPS = [
     'apps.accounts',
     'apps.persons',
     'apps.invitations',
+    'apps.gallery'
     # 'logs'
 ]
 
