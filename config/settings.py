@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 import dj_database_url
 import datetime
+from boto3.s3.transfer import TransferConfig
 
 from pathlib import Path
 from .core.db_connection import *
@@ -131,6 +132,16 @@ AWS_S3_USE_SSL = bool(int(os.environ.get('AWS_S3_USE_SSL', '1')))
 AWS_S3_VERIFY = bool(int(os.environ.get('AWS_S3_VERIFY', '1')))
 AWS_DEFAULT_ACL = os.environ.get('AWS_DEFAULT_ACL', None)
 AWS_QUERYSTRING_AUTH = bool(int(os.environ.get('AWS_QUERYSTRING_AUTH', '0')))
+
+# Configuración de transferencia S3 (Multipart Upload)
+AWS_S3_TRANSFER_CONFIG = TransferConfig(
+    multipart_threshold=1024 * 1024 * 5,  # 5MB
+    multipart_chunksize=1024 * 1024 * 5   # 5MB
+)
+
+# Límites para subida de archivos (en bytes)
+DATA_UPLOAD_MAX_MEMORY_SIZE = 262144000  # 250MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 262144000   # 250MB
 
 # Configuración de almacenamiento para medios (media files)
 if all([AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_STORAGE_BUCKET_NAME]):
