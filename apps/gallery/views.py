@@ -17,14 +17,19 @@ class PhotoViewSet(viewsets.ModelViewSet):
         data = request.data
         if 'photo' in request.FILES:
             Photo.objects.create(
-                file=request.FILES.get('photo')
+                file=request.FILES.get('photo'),
+                message=data['message']
             )
-
+            
             return Response(
-                data={},
+                data={
+                    "message": "Foto guardada"
+                },
                 status=status.HTTP_202_ACCEPTED
             )
         return Response(
-                data={},
-                status=status.HTTP_201_CREATED
+                data={
+                    "message": "Ocurrió un error, intente más tarde"
+                },
+                status=status.HTTP_406_NOT_ACCEPTABLE
             )
