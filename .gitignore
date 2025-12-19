@@ -6,6 +6,9 @@
 # Folders
 .idea/
 
+# proxy confs
+*.conf
+
 # pyc files
 __pycache__/
 *.pyc
